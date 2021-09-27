@@ -1,0 +1,20 @@
+{
+    "name": "gabrielporfiro/alpha",
+    "description": "Projeto de Teste",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Porfiro\\": "src/"
+        },
+        "files": [
+            "src/Controllers/DBConnection.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Gabriel",
+            "email": "contato@gabrielporfiro.com"
+        }
+    ]
+}
