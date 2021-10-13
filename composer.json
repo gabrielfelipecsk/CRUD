@@ -8,7 +8,8 @@
             "Porfiro\\": "src/"
         },
         "files": [
-            "src/Controllers/DBConnection.php"
+            "src/Controllers/DBConnection.php",
+            "src/Common/Environment.php"
         ]
     },
     "authors": [

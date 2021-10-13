@@ -41,11 +41,4 @@ class DBConnection{
 
         return self::$instance;
     }
-    final private function __construct(){
-
-    }
-    final private function __clone()
-    {
-        
-    }
 }
