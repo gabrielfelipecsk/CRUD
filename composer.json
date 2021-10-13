@@ -1,6 +1,6 @@
 {
-    "name": "gabrielporfiro/alpha",
-    "description": "Projeto de Teste",
+    "name": "gabrielporfiro/dbconnection",
+    "description": "DBConnection",
     "type": "library",
     "license": "MIT",
     "autoload": {
