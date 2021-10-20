@@ -6,6 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    '734ca41df4846a2d039adca8fb097727' => $baseDir . '/src/Controllers/DBConnection.php',
+    'd9a88f2827a4923ec1dfef039ff08cba' => $baseDir . '/src/Core/DBConnection.php',
     'e25f1fcb9d5c4b3e372c818bf558ffd6' => $baseDir . '/src/Common/Environment.php',
 );

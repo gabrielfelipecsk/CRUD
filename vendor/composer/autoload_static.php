@@ -7,7 +7,7 @@ namespace Composer\Autoload;
 class ComposerStaticInita51a34aaa808212c352b14825ffe4d0e
 {
     public static $files = array (
-        '734ca41df4846a2d039adca8fb097727' => __DIR__ . '/../..' . '/src/Controllers/DBConnection.php',
+        'd9a88f2827a4923ec1dfef039ff08cba' => __DIR__ . '/../..' . '/src/Core/DBConnection.php',
         'e25f1fcb9d5c4b3e372c818bf558ffd6' => __DIR__ . '/../..' . '/src/Common/Environment.php',
     );
 

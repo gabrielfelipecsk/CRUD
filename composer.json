@@ -1,6 +1,6 @@
 {
-    "name": "gabrielporfiro/dbconnection",
-    "description": "DBConnection",
+    "name": "gabrielporfiro/alpha",
+    "description": "Projeto de Teste",
     "type": "library",
     "license": "MIT",
     "autoload": {
@@ -8,7 +8,7 @@
             "Porfiro\\": "src/"
         },
         "files": [
-            "src/Controllers/DBConnection.php",
+            "src/Core/DBConnection.php",
             "src/Common/Environment.php"
         ]
     },
