@@ -31,11 +31,6 @@ $router = new Router(getenv('BASE_URL'));
  */
 $router->namespace("Src\Controllers");
 /**
- *  GET
- */
-$router->get("/", "Route:index");
-
-/**
  * POST 
  */
 $router->post("/login", "Auth:login");

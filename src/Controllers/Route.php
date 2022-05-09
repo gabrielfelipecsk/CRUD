@@ -9,10 +9,6 @@ use \PDO;
 
 class Route extends Api
 {
-    public static function index()
-    {
-        echo json_encode(["message" => "Welcome to API"], true);
-    }
     public static function dashboard()
     {
         $token = Api::getToken();
@@ -21,7 +17,6 @@ class Route extends Api
             header("HTTP/1.1 401 Unauthorized");
             return;
         }
-
     }
     public static function profile() 
     {

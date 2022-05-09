@@ -19,22 +19,22 @@ class Auth extends Api
     private const LOGIN_FAIL = "Login ou senha incorretos";
     private const SECRET_KEY = "S3cr3tK3y";
 
-    public static function isEmail($email) : bool
+    public static function isEmail(string $email) : bool
     {
         $email = filter_var($email, FILTER_VALIDATE_EMAIL);
-        if ($email === false) {
-            return false;
+        if ($email) {
+            return true;
         }
-        return true;
+        return false;
     }
-    public static function isPassword($password, $hash) : bool
+    public static function isPassword(string $password, string $hash) : bool
     {
         if (password_verify($password, $hash)) {
             return true;
         }
         return false;
     }
-    public static function consultUser($email) : array
+    public static function consultUser(string $email) : array
     {
         $db = DBConnection::getInstance();
         $sql = "SELECT * FROM users WHERE email = :email";
