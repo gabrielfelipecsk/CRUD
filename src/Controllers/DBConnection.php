@@ -4,14 +4,13 @@ namespace Src\Core;
 use \PDO;
 use \PDOException;
 
-
 final class DBConnection
 {
     private const DRIVER = "mysql";
     private const HOST = "localhost";
     private const DB = "api";
-    private const DBUSER = "porfiro";
-    private const DBPASS = "52566ojn";
+    private const DBUSER = "root";
+    private const DBPASS = "";
     private const OPTIONS = [
         PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8",
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
