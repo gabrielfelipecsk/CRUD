@@ -6,22 +6,41 @@ namespace Composer\Autoload;
 
 class ComposerStaticInita51a34aaa808212c352b14825ffe4d0e
 {
-    public static $files = array (
-        'd9a88f2827a4923ec1dfef039ff08cba' => __DIR__ . '/../..' . '/src/Core/DBConnection.php',
-        'e25f1fcb9d5c4b3e372c818bf558ffd6' => __DIR__ . '/../..' . '/src/Common/Environment.php',
-    );
-
     public static $prefixLengthsPsr4 = array (
-        'P' => 
+        'S' => 
         array (
-            'Porfiro\\' => 8,
+            'Src\\' => 4,
+        ),
+        'R' => 
+        array (
+            'ReCaptcha\\' => 10,
+        ),
+        'F' => 
+        array (
+            'Firebase\\JWT\\' => 13,
+        ),
+        'C' => 
+        array (
+            'CoffeeCode\\Router\\' => 18,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Porfiro\\' => 
+        'Src\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
+        ),
+        'ReCaptcha\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/google/recaptcha/src/ReCaptcha',
+        ),
+        'Firebase\\JWT\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/firebase/php-jwt/src',
+        ),
+        'CoffeeCode\\Router\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/coffeecode/router/src',
         ),
     );
 
