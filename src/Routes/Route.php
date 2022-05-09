@@ -1,5 +1,5 @@
 <?php
-namespace Src\Controllers;
+namespace Src\Routes;
 
 use Src\Controllers\Api;
 use Src\Core\DBConnection;

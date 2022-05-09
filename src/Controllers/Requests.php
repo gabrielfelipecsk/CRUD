@@ -1,16 +1,10 @@
 <?php
-namespace Src\Routes;
+namespace Src\Controllers;
 
 use CoffeeCode\Router\Router;
 
 class Requests
 {
-
-    public function __construct()
-    {
-        $this->Router();
-        
-    }
 
     public function Router()
     {
@@ -18,24 +12,24 @@ class Requests
         /**
          * Router
          */
-        $router = new Router(getenv('BASE_URL'));
+        $base = getenv('BASE_URL');
+        $router = new Router($base);
+    
 
         /**
          * Controllers
          */
         $router->namespace("Src\Controllers");
-        /**
-         * POST 
-         */
-        $router->post("/login", "Auth:login");
-        $router->post("/register", "Auth:register");
-        $router->post("/logout", "Auth:logout");
-        $router->post("/forgot", "Auth:forgot");
+        $router->post("/entrar", "Auth:login");
+        $router->post("/registrar", "Auth:register");
+        $router->post("/recuperar", "Auth:forgot");
+        $router->get("/sair", "Auth:logout");
 
         $router->group('/dashboard');
+        $router->get("/", "Dashboard:index");
 
-
-        $router->group('/profile');
+        
+        $router->group('/perfil');
         $router->get("/", "Route:profile");
         $router->put("/", "Route:profileUpdate");
         $router->delete("/", "Route:profileDelete");

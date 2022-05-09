@@ -4,7 +4,7 @@ namespace Src\Controllers;
 use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
 use Src\Common\Environment;
-use Src\Routes\Requests;
+use Src\Controllers\Requests;
 
 class Api extends Requests
 {
