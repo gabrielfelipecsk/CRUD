@@ -8,18 +8,15 @@ require __DIR__.'/vendor/autoload.php';
  * Configuration
  */
 /**
- * Headers for CORS 
- */
-require __DIR__.'/src/Core/Headers.php';
-
-/**
  * Use the application
  */
+use Src\Controllers\Api;
 use CoffeeCode\Router\Dispatch;
 use Src\Core\DBConnection;
 use CoffeeCode\Router\Router;
-\Src\Core\Environment::loadEnv(__DIR__);
 
+
+new Api(__DIR__);
 
 /**
  * Router
@@ -43,7 +40,9 @@ $router->group('/dashboard');
 
 $router->group('/profile');
 $router->get("/", "Route:profile");
-$router->post("/update", "Route:profileUpdate");
+$router->put("/", "Route:profileUpdate");
+$router->delete("/", "Route:profileDelete");
+
 
 /**
  * RENDER

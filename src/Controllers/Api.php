@@ -8,12 +8,17 @@ use Src\Common\Environment;
 class Api
 {
     private const SECRET_KEY = "S3cr3tK3y";
+    function __construct($dir)
+    {
+        $this->loadEnv($dir);
+        $this->setHeaders();
+    }
 
-    public static function Message(string $message, int $status)
+    public static function Message($message,$status)
     {
         $response = [
-            'status' => $status,
-            'message' => $message
+            'code' => $status,
+            'data' => $message
         ];
         return json_encode($response, true);
     }
@@ -53,5 +58,15 @@ class Api
         foreach ($headers as $headerType => $headerValue) {
             header($headerType.': '.$headerValue);
         }
+    }
+    public static function loadEnv($dir)
+    {
+        if (!file_exists($dir.'/.env')) {
+            return false;
+        }   
+        $lines = file($dir.'/.env');
+        foreach ($lines as $line) {
+            putenv(trim($line));
+        }  
     }
 }
